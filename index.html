@@ -49,7 +49,7 @@
   <main>
 
     <!-- inicio header -->
-    <header class="min-h-[50vh] bg-cover bg-center bg-patternmobile bg-no-repeat border-2 border-yellow-500 py-7 flex flex-col items-center">
+    <header class="relative min-h-[50vh] bg-cover bg-center bg-patternmobile bg-no-repeat py-7 flex flex-col items-center">
         <div>
           <h1 class="font-rubik font-semibold text-white text-lg">IP Address Tracker</h1>
         </div>
@@ -58,12 +58,13 @@
         <form class="w-4/5 h-[60px] relative mt-7" action="#">
 
             <input 
-              class="w-full h-full rounded-lg placeholder-darkgray font-poppins font-light text-[0.6rem] pl-5"  
+              class="w-full h-full rounded-lg placeholder-darkgray font-poppins font-light text-[0.7rem] pl-5"  
               placeholder="Search for any IP address or domain" 
               type="text"
+              maxlength="15"
             >
 
-            <div class="w-1/6 h-full absolute top-0 left-[85%] rounded-r-lg flex items-center justify-center bg-blackdarkgray">
+            <div class="w-1/6 h-full absolute top-0 left-[84%] rounded-r-lg flex items-center justify-center bg-blackdarkgray">
               <img 
                 src="./images/icon-arrow.svg"
                 class="w-3.5 h-3.5"
@@ -74,13 +75,20 @@
         <!-- fin form -->
 
         <!-- inicio información de la api -->
-        <div class="w-4/5">
-
+        <div class="w-4/5 h-3/5 py-5 px-5 bg-white absolute top-1/2 rounded-lg border-3 border-blue-400 text-center">
+          <span class="font-rubik font-semibold text-darkgray text-[0.6rem]">IP ADDRESS</span>
         </div>
         <!-- fin información de la api -->
         
     </header>
     <!-- fin header -->
+
+    <!-- inicio map -->
+    <div class="w-full h-screen border-2 border-red-400 bg-[#ededed]">
+
+    </div>
+    <!-- fin map -->
+
     <!-- IP Address Tracker
   
     Search for any IP address or domain
@@ -90,11 +98,7 @@
     Timezone
       UTC ,add offset value dynamically using the API 
     ISP -->
-    
-    
-    <h1 class="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Rinel iñiguez sosa</a>.
