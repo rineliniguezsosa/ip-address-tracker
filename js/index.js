@@ -1,6 +1,16 @@
 document.addEventListener('DOMContentLoaded',()=>{
-    getipaddress();    
+    getipaddress();   
+    
+    const map = L.map('map').setView([51.505, -0.09], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+    
+    // Opcional: Añade un marcador inicial
+    L.marker([51.505, -0.09]).addTo(map).bindPopup('Hola desde aquí!').openPopup();
 })
+
 //methods
 const getipaddress = async() =>{
     // const ip = "192.212.174.101";
@@ -16,7 +26,7 @@ const getipaddress = async() =>{
                 console.log("info api",info);
                 
             }
-            console.log(resp);
+            // console.log(resp);
             
         } catch (error) {
             console.log(error);
@@ -26,3 +36,6 @@ const getipaddress = async() =>{
 
 }
 
+//draw the map
+// var map = L.map('map').setView([51.505, -0.09], 13);
+// const map = L.map('map').setView([51.505, -0.09], 13);
