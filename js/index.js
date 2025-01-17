@@ -1,12 +1,15 @@
-
+document.addEventListener('DOMContentLoaded',()=>{
+    getipaddress();    
+})
 //methods
 const getipaddress = async() =>{
-    const ipadress = document.getElementById('ipaddress').value
-    console.log("valor",ipadress);
-    if (ipadress) {
+    // const ip = "192.212.174.101";
+    const ipaddress = document.getElementById('ipaddress').value
+    console.log("valor",ipaddress);
+    if (ipaddress) {
         try {
             const API_KEY = "at_ni029uBQxjPqAHdYFZ41lO7T2nANz";
-            const req = await fetch(`https://geo.ipify.org/api/v1?apiKey=${API_KEY}&ipAddress=${ipadress}`);
+            const req = await fetch(`https://geo.ipify.org/api/v1?apiKey=${API_KEY}&ipAddress=${ipaddress}`);
             console.log("valor de request ok:",req.ok);
             if(req.ok){
                 const info = await req.json()
@@ -16,6 +19,7 @@ const getipaddress = async() =>{
             console.log(resp);
             
         } catch (error) {
+            console.log(error);
             
         }
     }
