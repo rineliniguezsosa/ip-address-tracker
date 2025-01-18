@@ -1,14 +1,5 @@
 document.addEventListener('DOMContentLoaded',()=>{
     getipaddress();
-
-    // const map = L.map('map').setView([51.505, -0.09], 13);
-
-    // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    //     attribution: '© OpenStreetMap contributors'
-    //   }).addTo(map);
-
-    // // Opcional: Añade un marcador inicial
-    // L.marker([51.505, -0.09]).addTo(map).bindPopup('Hola desde aquí!').openPopup();
 })
 
 //methods
@@ -23,11 +14,9 @@ const getipaddress = async() =>{
             console.log("valor de request ok:",req.ok);
             if(req.ok){
                 const resp = await req.json()
-                console.log("info api",resp);
                 renderIpDetails(resp);
                 renderMap(resp);
             }
-            // console.log(resp);
 
         } catch (error) {
             console.log(error);
