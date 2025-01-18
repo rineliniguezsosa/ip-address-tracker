@@ -22,9 +22,9 @@ const getipaddress = async() =>{
             const req = await fetch(`https://geo.ipify.org/api/v1?apiKey=${API_KEY}&ipAddress=${ipaddress}`);
             console.log("valor de request ok:",req.ok);
             if(req.ok){
-                const info = await req.json()
-                console.log("info api",info);
-                
+                const resp = await req.json()
+                console.log("info api",resp);
+                renderIpDetails(resp);
             }
             // console.log(resp);
             
@@ -36,6 +36,9 @@ const getipaddress = async() =>{
 
 }
 
+const renderIpDetails = () =>{
+    
+}
 //draw the map
 // var map = L.map('map').setView([51.505, -0.09], 13);
 // const map = L.map('map').setView([51.505, -0.09], 13);
