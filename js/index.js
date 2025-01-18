@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded',()=>{
-    getipaddress();   
-    
+    getipaddress();
+
     const map = L.map('map').setView([51.505, -0.09], 13);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors'
       }).addTo(map);
-    
+
     // Opcional: Añade un marcador inicial
     L.marker([51.505, -0.09]).addTo(map).bindPopup('Hola desde aquí!').openPopup();
 })
@@ -27,17 +27,42 @@ const getipaddress = async() =>{
                 renderIpDetails(resp);
             }
             // console.log(resp);
-            
+
         } catch (error) {
             console.log(error);
-            
+
         }
     }
 
 }
 
-const renderIpDetails = () =>{
-    
+const renderIpDetails = (data) =>{
+    const header = document.getElementsByTagName("header")[0];
+
+    const deatilsip  = `
+        <div
+          class="w-4/5 h-3/5 py-3 px-3 bg-white absolute top-1/2 rounded-lg border-3
+          border-blue-400 flex flex-col z-10"
+        >
+          <div class="w-full h-1/4 py-1 text-center">
+            <h2 class="font-rubik font-semibold text-darkgray text-[0.6rem]">IP ADDRESS</h2>
+            <p>${data.ip}</p>
+          </div>
+          <div class="w-full h-1/4 py-1 text-center">
+            <h2 class="font-rubik font-semibold text-darkgray text-[0.6rem]">LOCATION</h2>
+            <p>${data.location.region},${data.location.city} ${data.location.postalCode}</p>
+          </div>
+          <div class="w-full h-1/4 py-1 text-center">
+            <h2 class="font-rubik font-semibold text-darkgray text-[0.6rem]">TIMEZONE</h2>
+            <p>${data.location.timezone}</p>
+          </div>
+          <div class="w-full h-1/4 py-1 text-center">
+            <h2 class="font-rubik font-semibold text-darkgray text-[0.6rem]">ISP</h2>
+            <p>${data.isp}</p>
+          </div>
+        </div>
+    `
+    header.innerHTML += deatilsip;
 }
 //draw the map
 // var map = L.map('map').setView([51.505, -0.09], 13);
