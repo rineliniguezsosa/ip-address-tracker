@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded',()=>{
     getipaddress();
 
-    const map = L.map('map').setView([51.505, -0.09], 13);
+    // const map = L.map('map').setView([51.505, -0.09], 13);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors'
-      }).addTo(map);
+    // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    //     attribution: '© OpenStreetMap contributors'
+    //   }).addTo(map);
 
-    // Opcional: Añade un marcador inicial
-    L.marker([51.505, -0.09]).addTo(map).bindPopup('Hola desde aquí!').openPopup();
+    // // Opcional: Añade un marcador inicial
+    // L.marker([51.505, -0.09]).addTo(map).bindPopup('Hola desde aquí!').openPopup();
 })
 
 //methods
@@ -25,6 +25,7 @@ const getipaddress = async() =>{
                 const resp = await req.json()
                 console.log("info api",resp);
                 renderIpDetails(resp);
+                renderMap(resp);
             }
             // console.log(resp);
 
@@ -71,6 +72,19 @@ const renderIpDetails = (data) =>{
         </div>
     `
     header.innerHTML += detailip;
+}
+
+const renderMap = ({location}) =>{
+  const { lat, lng } = location;
+
+  const map = L.map('map').setView([lat, -lng], 13);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  // Opcional: Añade un marcador inicial
+  L.marker([lat, lng]).addTo(map).bindPopup('Hola desde aquí!').openPopup();
 }
 //draw the map
 // var map = L.map('map').setView([51.505, -0.09], 13);
