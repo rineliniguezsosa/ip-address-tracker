@@ -4,9 +4,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 //methods
 const getipaddress = async() =>{
-    // const ip = "192.212.174.101";
     const ipaddress = document.getElementById('ipaddress').value
-    console.log("valor",ipaddress);
     if (ipaddress) {
         try {
             const API_KEY = "at_ni029uBQxjPqAHdYFZ41lO7T2nANz";
@@ -72,9 +70,5 @@ const renderMap = ({location}) =>{
     attribution: '© OpenStreetMap contributors'
   }).addTo(map);
 
-  // Opcional: Añade un marcador inicial
   L.marker([lat, lng]).addTo(map).bindPopup('Hola desde aquí!').openPopup();
 }
-//draw the map
-// var map = L.map('map').setView([51.505, -0.09], 13);
-// const map = L.map('map').setView([51.505, -0.09], 13);
