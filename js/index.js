@@ -70,7 +70,7 @@ const renderIpDetails = (data) =>{
           </div>
         </div>
     `
-    header.innerHTML += deatilsip;
+    header.innerHTML += detailip;
 }
 //draw the map
 // var map = L.map('map').setView([51.505, -0.09], 13);
