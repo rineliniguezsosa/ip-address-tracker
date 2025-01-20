@@ -69,7 +69,10 @@
         </div>
 
         <!-- inicio form -->
-        <form class="w-4/5 h-[60px] relative mt-7" action="#">
+        <form 
+          class="w-4/5 h-[60px] relative mt-7 lg:w-2/5" 
+          action="#"
+        >
 
             <input 
               class="w-full h-full rounded-lg placeholder-darkgray font-poppins font-light text-[0.7rem] pl-5"  
@@ -80,7 +83,11 @@
               value="192.212.174.101"
             >
 
-            <div onclick="getipaddress()" class="w-1/6 h-full absolute top-0 left-[84%] rounded-r-lg flex items-center justify-center bg-blackdarkgray">
+            <div 
+              onclick="getipaddress()" 
+              class="w-1/6 h-full absolute top-0 left-[84%] rounded-r-lg flex items-center justify-center 
+              bg-blackdarkgray"
+            >
               <img 
                 src="./images/icon-arrow.svg"
                 class="w-3.5 h-3.5"
@@ -88,31 +95,7 @@
               >
             </div>
         </form>
-        <!-- fin form -->
-
-        <!-- inicio información de la api -->
-        <!-- <div 
-          class="w-4/5 h-3/5 py-3 px-3 bg-white absolute top-1/2 rounded-lg border-3 
-          border-blue-400 flex flex-col z-10"
-        >
-          <div class="w-full h-1/4 py-1 text-center">
-            <h2 class="font-rubik font-semibold text-darkgray text-[0.6rem]">IP ADDRESS</h2>
-            <p></p>
-          </div>
-          <div class="w-full h-1/4 py-1 text-center">
-            <h2 class="font-rubik font-semibold text-darkgray text-[0.6rem]">LOCATION</h2>
-            <p></p>
-          </div>
-          <div class="w-full h-1/4 py-1 text-center">
-            <h2 class="font-rubik font-semibold text-darkgray text-[0.6rem]">TIMEZONE</h2>
-            <p></p>
-          </div>
-          <div class="w-full h-1/4 py-1 text-center">
-            <h2 class="font-rubik font-semibold text-darkgray text-[0.6rem]">ISP</h2>
-            <p></p>
-          </div>
-        </div> -->
-        <!-- fin información de la api -->
+        <!-- fin form -->  
         
     </header>
     <!-- fin header -->
@@ -123,19 +106,9 @@
     </div>
     <!-- fin map -->
 
-    <!-- IP Address Tracker
-  
-    Search for any IP address or domain
-  
-    IP Address
-    Location
-    Timezone
-      UTC ,add offset value dynamically using the API 
-    ISP -->
-
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Rinel iñiguez sosa</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/rineliniguezsosa">Rinel iñiguez sosa</a>.
     </div>
   </main>
 </body>
