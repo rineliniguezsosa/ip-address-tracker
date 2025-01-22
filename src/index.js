@@ -2,18 +2,27 @@ const API_KEY = import.meta.env.VITE_TOKEN;
 
 document.addEventListener('DOMContentLoaded',()=>{
     
-    const searchButton = document.getElementById('searchButton');
+    let searchButton = document.getElementById('searchButton');
+    let ipaddress = document.getElementById('ipaddress')
     
     if(searchButton){
         searchButton.addEventListener('click',getipaddress)
+    }
+
+    if(ipaddress){
+      ipaddress = document.addEventListener('change',(event)=>{
+        getipaddress(event.target.value)
+      })
     }
 
     getipaddress();
 })
 
 //methods
-const getipaddress = async() =>{
-    const ipaddress = document.getElementById('ipaddress').value
+const getipaddress = async(ipaddress = '192.212.174.101') =>{
+    console.log(event.target.value);
+    
+    // const ipaddress = document.getElementById('ipaddress').value
     if (ipaddress) {
         try {
             // const API_KEY = "at_ni029uBQxjPqAHdYFZ41lO7T2nANz";
@@ -24,6 +33,7 @@ const getipaddress = async() =>{
                 console.log(resp);
                 renderIpDetails(resp);
                 renderMap(resp);
+                // document.getElementById('ipaddress').value = '';
             }
 
         } catch (error) {
