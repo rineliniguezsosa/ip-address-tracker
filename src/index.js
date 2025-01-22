@@ -1,6 +1,13 @@
 const API_KEY = import.meta.env.VITE_TOKEN;
 
 document.addEventListener('DOMContentLoaded',()=>{
+    
+    const searchButton = document.getElementById('searchButton');
+    
+    if(searchButton){
+        searchButton.addEventListener('click',getipaddress)
+    }
+
     getipaddress();
 })
 
@@ -10,17 +17,17 @@ const getipaddress = async() =>{
     if (ipaddress) {
         try {
             // const API_KEY = "at_ni029uBQxjPqAHdYFZ41lO7T2nANz";
-            const req = await fetch(`ipinfo.io/${ipaddress}?token=${API_KEY}`);
+            const req = await fetch(`https://ipinfo.io/${ipaddress}?token=${API_KEY}`);
             console.log("valor de request ok:",req.ok);
             if(req.ok){
                 const resp = await req.json()
+                console.log(resp);
                 renderIpDetails(resp);
                 renderMap(resp);
             }
 
         } catch (error) {
-            console.log(error);
-
+            console.log(error)
         }
     }
 
@@ -59,7 +66,7 @@ const renderIpDetails = (data) =>{
 
             <div>
               <p class="font-rubik font-semibold text-blackdarkgray text-lg">
-                ${data.region},${data.city} ${data.postalCode}
+                ${data.region},${data.city} ${data.postal}
               </p>
             </div>
 
@@ -92,9 +99,9 @@ const renderIpDetails = (data) =>{
     header.innerHTML += detailip;
 }
 
-const renderMap = ({loc}) =>{
-  const { lat, lng } = loc;
-
+const renderMap = (resp) =>{    
+  const [lat,lng] = resp.loc.split(",");
+  
   const map = L.map('map').setView([lat, -lng], 13);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
