@@ -88,7 +88,7 @@ Follow these steps to download and run the project locally
 2.- **Navigate to the project directory:**
 
 ```bash
-cd ip-address-tracker
+cd ip-address-tracker-master
 ```
 
 3.-**Open the project in Visual Studio Code:**
@@ -99,22 +99,31 @@ code .
 
 ## Deployment
 
-To deploy the project locally using Live Server, follow these steps:
+To deploy the project locally using vite, follow these steps:
 
-1. **Install the Live Server extension:**
+1. **Install the dependencies:**
 
-- Open Visual Studio Code.
-- Go to the extensions tab (squares icon in the left sidebar).
-- Search for "Live Server" and install the extension developed by Ritwick Dey.
+```bash
+npm install
+```
+2. **Set up your API key:**
 
-2. **Run Live Server:**
+In order for the project to work properly, you will need an IPInfo.io API key. 
+Sign up and get your API key.
 
-- Open the **index.html** file in Visual Studio Code.
-- Right click on the editor and select "Open with Live Server.
-- Alternatively, you can click the "Go Live" button in the bottom right corner of Visual Studio Code.
+- In the index.js file, find the URL where the API request is made (using fetch), and replace API_KEY with your API key.
 
-3. **View the project:**
+```js
+const req = await fetch(`https://ipinfo.io/${ipaddress}?token=API_KEY`);
+```
+3. **Start the development server:**
 
-- Live Server will open a new tab in your browser with the URL http://127.0.0.1:5500/ (URL may vary). Here you can see your project in operation.
+```bash
+npm run dev
+```
+
+4. **View the project:**
+
+- Vite Server will open a new tab in your browser with the URL http://localhost:5173/ (URL may vary). Here you can see your project in operation.
 
 
