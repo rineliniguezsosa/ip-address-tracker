@@ -14,7 +14,9 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
+- [Requirements](#requirements)
+- [Install](#install)
+- [Deployment](#deployment)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -55,31 +57,12 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
@@ -87,27 +70,66 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+- full stack technologies
 
 **Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [background image in tailwindcss](https://tailwindcss.com/docs/background-image) - This resource helped me set up CSS syntax for the image background using tailwindcss
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@rineliniguezsosa](https://www.frontendmentor.io/profile/rineliniguezsosa)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+## Requirements 
 
-## Acknowledgments
+- [Visual Studio Code](https://code.visualstudio.com/) (or any other code editor of your choice)
+- [Live Server Extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for Visual Studio Code
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+## Install
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Follow these steps to download and run the project locally
+
+1. **Clone this repository:**
+
+  Open your terminal and run the following command:
+
+   ```bash
+   git clone https://github.com/rineliniguezsosa/ip-address-tracker.git
+   ```
+
+2.- **Navigate to the project directory:**
+
+```bash
+cd ip-address-tracker
+```
+
+3.-**Open the project in Visual Studio Code:**
+
+```bash
+code .
+```
+
+## Deployment
+
+To deploy the project locally using Live Server, follow these steps:
+
+1. **Install the Live Server extension:**
+
+- Open Visual Studio Code.
+- Go to the extensions tab (squares icon in the left sidebar).
+- Search for "Live Server" and install the extension developed by Ritwick Dey.
+
+2. **Run Live Server:**
+
+- Open the **index.html** file in Visual Studio Code.
+- Right click on the editor and select "Open with Live Server.
+- Alternatively, you can click the "Go Live" button in the bottom right corner of Visual Studio Code.
+
+3. **View the project:**
+
+- Live Server will open a new tab in your browser with the URL http://127.0.0.1:5500/ (URL may vary). Here you can see your project in operation.
+
+
