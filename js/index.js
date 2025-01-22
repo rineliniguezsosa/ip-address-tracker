@@ -8,7 +8,7 @@ const getipaddress = async() =>{
     if (ipaddress) {
         try {
             const API_KEY = "at_ni029uBQxjPqAHdYFZ41lO7T2nANz";
-            const req = await fetch(`https://geo.ipify.org/api/v1?apiKey=${API_KEY}&ipAddress=${ipaddress}`);
+            const req = await fetch(`https://geo.ipify.org/api/v1?apiKey=${API_KEY}&ipAddress&domain=${ipaddress}`);
             console.log("valor de request ok:",req.ok);
             if(req.ok){
                 const resp = await req.json()
