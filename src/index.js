@@ -102,7 +102,7 @@ const renderIpDetails = (data) =>{
 const renderMap = (resp) =>{    
   const [lat,lng] = resp.loc.split(",");
   
-  const map = L.map('map').setView([lat, -lng], 13);
+  const map = L.map('map').setView([lat, lng], 13);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
