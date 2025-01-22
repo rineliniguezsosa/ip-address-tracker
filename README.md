@@ -121,4 +121,6 @@ To deploy the project locally using Live Server, follow these steps:
 
 - Live Server will open a new tab in your browser with the URL http://127.0.0.1:5500/ (URL may vary). Here you can see your project in operation.
 
+**Note: At the moment my free geo.ipify subscription has ended so you will not be able to see important functionality.**
+
 
