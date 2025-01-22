@@ -20,12 +20,8 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 //methods
 const getipaddress = async(ipaddress = '192.212.174.101') =>{
-    console.log(event.target.value);
-    
-    // const ipaddress = document.getElementById('ipaddress').value
     if (ipaddress) {
         try {
-            // const API_KEY = "at_ni029uBQxjPqAHdYFZ41lO7T2nANz";
             const req = await fetch(`https://ipinfo.io/${ipaddress}?token=${API_KEY}`);
             console.log("valor de request ok:",req.ok);
             if(req.ok){
@@ -33,7 +29,7 @@ const getipaddress = async(ipaddress = '192.212.174.101') =>{
                 console.log(resp);
                 renderIpDetails(resp);
                 renderMap(resp);
-                // document.getElementById('ipaddress').value = '';
+            
             }
 
         } catch (error) {
