@@ -18,7 +18,6 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
 - [Install](#install)
 - [Deployment](#deployment)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -52,7 +51,6 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
@@ -60,8 +58,6 @@ Users should be able to:
 ### Continued development
 
 - full stack technologies
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
