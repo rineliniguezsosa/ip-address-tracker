@@ -48,7 +48,7 @@ const renderIpDetails = (data) =>{
 
     const detailip  = `
         <div
-          class="w-4/5 h-4/5 py-3 px-3 bg-white absolute top-[61%] rounded-lg border-3
+          class="w-4/5 py-3 px-3 bg-white absolute top-[61%] rounded-lg border-3
           flex flex-col z-10 lg:flex-row lg:py-2 lg:px-6 lg:items-center lg:h-[60%]"
         >
           <div class="w-full h-1/4 py-2 text-center lg:h-1/2 lg:px-5 lg:flex lg:flex-col lg:items-start 
