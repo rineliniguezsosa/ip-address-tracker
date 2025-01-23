@@ -105,14 +105,20 @@ const renderIpDetails = (data) =>{
     header.innerHTML += detailip;
 }
 
+let map;
 const renderMap = (resp) =>{    
   const [lat,lng] = resp.loc.split(",");
-  
-  const map = L.map('map').setView([lat, lng], 13);
+ 
+  if(!map){
+    map = L.map('map').setView([lat, lng], 10);
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors'
-  }).addTo(map);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+  }
+  
+  map.flyTo([lat, lng], 10);
 
   L.marker([lat, lng]).addTo(map).bindPopup('Hola desde aquí!').openPopup();
+
 }
