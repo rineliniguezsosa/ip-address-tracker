@@ -23,7 +23,10 @@
       theme: {
         extend: {
           colors: {
-            blackdarkgray: 'hsl(0, 0%, 17%)',
+            blackdarkgray: {
+              DEFAULT: 'hsl(0, 0%, 17%)',
+              600: 'hsl(0, 0%, 27%)'
+            },
             darkgray:'hsl(0, 0%, 59%)'
           },
           fontFamily: {
@@ -83,7 +86,7 @@
 
             <div 
               class="w-1/6 h-full absolute top-0 left-[84%] rounded-r-lg flex items-center justify-center 
-              bg-blackdarkgray"
+              bg-blackdarkgray hover:bg-blackdarkgray-600"
               id="searchButton"
             >
               <img 
