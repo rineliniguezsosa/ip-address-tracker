@@ -1,7 +1,6 @@
 const API_KEY = import.meta.env.VITE_TOKEN;
 
 document.addEventListener('DOMContentLoaded',()=>{
-    // este codigo debo de refactorizarlo 
     let searchButton = document.getElementById('searchButton');
     let ipaddress = document.getElementById('ipaddress')
     
