@@ -1,4 +1,5 @@
 const API_KEY = import.meta.env.VITE_TOKEN;
+const MY_IP = import.meta.env.VITE_IP;
 
 document.addEventListener('DOMContentLoaded',()=>{
     let searchButton = document.getElementById('searchButton');
@@ -18,7 +19,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 })
 
 //methods
-const getipaddress = async(ipaddress = '192.212.174.101') =>{
+const getipaddress = async(ipaddress = MY_IP) =>{
     if (ipaddress) {
         try {
             const req = await fetch(`https://ipinfo.io/${ipaddress}?token=${API_KEY}`);
