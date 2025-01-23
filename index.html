@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/ip-address-tracker/assets/favicon-32x32-DQjEQYWa.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Frontend Mentor | IP Address Tracker</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""
+  />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin="">
+  </script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            blackdarkgray: {
+              DEFAULT: 'hsl(0, 0%, 17%)',
+              600: 'hsl(0, 0%, 27%)'
+            },
+            darkgray:'hsl(0, 0%, 59%)'
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'serif'],
+            rubik: ['Rubik', 'serif'],
+          },
+          fontWeight:{
+            regular: '400',
+            semibold: '500', 
+            light:'700'
+          },
+          screen:{
+            'sm': "640px", // Dispositivos móviles grandes
+            'md': "768px", // Tablets (iPad estándar, tablets Android)
+            'lg':"1024px", //laptops pequeñas
+            '2xl': "1440px"
+          },
+          backgroundImage:{
+            'patternmobile':"url('./images/pattern-bg-mobile.png')",
+            'patterndesktop':"url('./images/pattern-bg-desktop.png')"
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <script type="module" crossorigin src="/ip-address-tracker/assets/index-oK5VE1on.js"></script>
+</head>
+<body>
+  <main>
+
+    <!-- inicio header -->
+    <header 
+        class="relative min-h-[43vh] bg-cover bg-center bg-patternmobile bg-no-repeat 
+        py-7 flex flex-col items-center lg:bg-patterndesktop"
+      >
+        <div>
+          <h1 class="font-rubik font-semibold text-white text-lg">IP Address Tracker</h1>
+        </div>
+
+        <!-- inicio form -->
+        <form 
+          class="w-4/5 h-[60px] relative mt-7 lg:w-2/5" 
+          action="#"
+        >
+
+            <input 
+              class="w-full h-full rounded-lg placeholder-darkgray font-poppins font-light text-[0.7rem] pl-5"  
+              placeholder="Search for any IP address or domain" 
+              type="text"
+              maxlength="15"
+              id="ipaddress"
+            >
+
+            <div 
+              class="w-1/6 h-full absolute top-0 left-[84%] rounded-r-lg flex items-center justify-center 
+              bg-blackdarkgray hover:bg-blackdarkgray-600"
+              id="searchButton"
+            >
+              <img 
+                src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='11'%20height='14'%3e%3cpath%20fill='none'%20stroke='%23FFF'%20stroke-width='3'%20d='M2%201l6%206-6%206'/%3e%3c/svg%3e"
+                class="w-3.5 h-3.5"
+                alt="icon-arrow"
+              >
+            </div>
+        </form>
+        <!-- fin form -->  
+        
+    </header>
+    <!-- fin header -->
+
+    <!-- inicio map -->
+    <div id="map" class="w-full h-screen  bg-[#ededed] z-0 relative">
+
+    </div>
+    <!-- fin map -->
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/rineliniguezsosa">Rinel iñiguez sosa</a>.
+    </div>
+  </main>
+</body>
+</html>
