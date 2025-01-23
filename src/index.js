@@ -23,7 +23,6 @@ const getipaddress = async(ipaddress = '192.212.174.101') =>{
     if (ipaddress) {
         try {
             const req = await fetch(`https://ipinfo.io/${ipaddress}?token=${API_KEY}`);
-            console.log("valor de request ok:",req.ok);
             if(req.ok){
                 const resp = await req.json()
                 console.log(resp);
