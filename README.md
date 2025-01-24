@@ -106,7 +106,7 @@ To deploy the project locally using vite, follow these steps:
 ```bash
 npm install
 ```
-2. **Set up your API key:**
+2. **Set up your API key in the IP environment variable API_KEY:**
 
 In order for the project to work properly, you will need an IPInfo.io API key. 
 Sign up and get your API key.
@@ -117,7 +117,7 @@ Sign up and get your API key.
 const req = await fetch(`https://ipinfo.io/${ipaddress}?token=${API_KEY}`);
 ```
 
-3. **I set your initial ip address in the IP environment variable**:
+3. **set up your initial ip address in the IP environment variable**:
 
 ```js
 const MY_IP = import.meta.env.VITE_IP;
