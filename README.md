@@ -114,9 +114,16 @@ Sign up and get your API key.
 - In the index.js file, find the URL where the API request is made (using fetch), and replace API_KEY with your API key.
 
 ```js
-const req = await fetch(`https://ipinfo.io/${ipaddress}?token=API_KEY`);
+const req = await fetch(`https://ipinfo.io/${ipaddress}?token=${API_KEY}`);
 ```
-3. **Start the development server:**
+
+3. **I set your initial ip address in the IP environment variable**:
+
+```js
+const MY_IP = import.meta.env.VITE_IP;
+```
+
+4. **Start the development server:**
 
 ```bash
 npm run dev
