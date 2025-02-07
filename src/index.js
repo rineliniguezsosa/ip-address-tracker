@@ -29,7 +29,6 @@ const getipaddress = async(ipaddress = MY_IP) =>{
         alert('Error al obtener los datos de la ip')
       }
       const resp = await req.json()
-      console.log(resp);
       renderIpDetails(resp);
       renderMap(resp);
       
