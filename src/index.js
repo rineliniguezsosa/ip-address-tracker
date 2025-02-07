@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded',async()=>{
       console.log("ip",MY_IP);
       
       await getipaddress(MY_IP)
+    }else{
+      alert('Formato de IP incorrecto')
     }
   })
   
