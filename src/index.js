@@ -13,8 +13,6 @@ document.addEventListener('DOMContentLoaded',async()=>{
   
     if(input && regex.test(input)){
       MY_IP = input;
-      console.log("ip",MY_IP);
-      
       await getipaddress(MY_IP)
     }else{
       alert('Formato de IP incorrecto')
@@ -34,7 +32,7 @@ const getipaddress = async(ipaddress = MY_IP) =>{
                 renderIpDetails(resp);
                 renderMap(resp);
             }
-
+            
         } catch (error) {
             console.log(error)
         }
