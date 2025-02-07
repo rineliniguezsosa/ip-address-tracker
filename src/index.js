@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded',async()=>{
       MY_IP = input;
       await getipaddress(MY_IP)
     }else{
-      alert('Formato de IP incorrecto')
+      alert('Fatal error, ingrese una ip ó un formato adecuado')
     }
   })
   
@@ -23,10 +23,6 @@ document.addEventListener('DOMContentLoaded',async()=>{
 
 //methods
 const getipaddress = async(ipaddress = MY_IP) =>{  
-    if(!ipaddress){
-      alert('Por favor, ingresa una dirección IP válida')
-      return;
-    }
     try {
       const req = await fetch(`https://ipinfo.io/${ipaddress}?token=${API_KEY}`);
       if(!req.ok){
