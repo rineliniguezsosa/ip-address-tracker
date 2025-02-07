@@ -23,21 +23,24 @@ document.addEventListener('DOMContentLoaded',async()=>{
 
 //methods
 const getipaddress = async(ipaddress = MY_IP) =>{  
-    if (ipaddress) {
-        try {
-            const req = await fetch(`https://ipinfo.io/${ipaddress}?token=${API_KEY}`);
-            if(req.ok){
-                const resp = await req.json()
-                console.log(resp);
-                renderIpDetails(resp);
-                renderMap(resp);
-            }
-            
-        } catch (error) {
-            console.log(error)
-        }
+    if(!ipaddress){
+      alert('Por favor, ingresa una dirección IP válida')
+      return;
     }
-
+    try {
+      const req = await fetch(`https://ipinfo.io/${ipaddress}?token=${API_KEY}`);
+      if(!req.ok){
+        alert('Error al obtener los datos de la ip')
+      }
+      const resp = await req.json()
+      console.log(resp);
+      renderIpDetails(resp);
+      renderMap(resp);
+      
+    } catch (error) {
+      console.log(error)
+      alert('Error algo salio mal')
+    }
 }
 
 const renderIpDetails = (data) =>{
